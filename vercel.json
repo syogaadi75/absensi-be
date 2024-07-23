@@ -11,18 +11,18 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://absensi-be-jsr3.vercel.app",
         "APP_NAME": "Absensi",
         "APP_KEY": "",
         "APP_TIMEZONE": "UTC",
         "LOG_SLACK_WEBHOOK_URL": "",
 
         "DB_CONNECTION": "mysql",
-        "DB_HOST": "localhost",
+        "DB_HOST": "sql12.freemysqlhosting.net",
         "DB_PORT": "3306",
-        "DB_DATABASE": "absensi",
-        "DB_USERNAME": "root",
-        "DB_PASSWORD": "",
+        "DB_DATABASE": "sql12721740",
+        "DB_USERNAME": "sql12721740",
+        "DB_PASSWORD": "NgyqTI4CNg",
         "QUEUE_CONNECTION": "sync",
 
         "JWT_SECRET":"vufBFJKK9RezvPS8nZrbP9pFgLcHy6y0nSHhFeCnUyqU6jGC3HD18dWZbVe0gOCw",
