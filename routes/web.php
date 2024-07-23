@@ -53,3 +53,13 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
         $router->put('/update_libur/{id}', 'DetailAbsensiController@updateLibur');
     });
 });
+
+// Route untuk tes koneksi database
+$router->get('/test-db-connection', function () {
+    try {
+        \DB::connection()->getPdo();
+        return response()->json(['status' => 'success', 'message' => 'Database connection is successful']);
+    } catch (\Exception $e) {
+        return response()->json(['status' => 'error', 'message' => 'Could not connect to the database. Please check your configuration.'], 500);
+    }
+});
