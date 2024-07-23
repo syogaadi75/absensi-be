@@ -24,8 +24,6 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        \Log::info('Login attempt', ['request' => $request->all()]);
-
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required'

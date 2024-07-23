@@ -20,8 +20,6 @@ class CorsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        \Log::info('CORS Middleware: Incoming Request', ['request' => $request->all()]);
-
         $headers = [
             'Access-Control-Allow-Origin' => '*',
             'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
@@ -32,17 +30,14 @@ class CorsMiddleware
             'X-Frame-Options' => 'Allow-From *'
         ];
 
+
         if ($request->isMethod('OPTIONS')) {
-            \Log::info('CORS Middleware: OPTIONS Request', ['headers' => $headers]);
             return response()->json('{"method":"OPTIONS"}', 200, $headers);
         }
 
         $response = $next($request);
         $response->headers->add($headers);
 
-        \Log::info('CORS Middleware: Outgoing Response', ['response' => $response]);
-
         return $response;
     }
-
 }
