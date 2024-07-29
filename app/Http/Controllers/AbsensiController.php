@@ -166,6 +166,6 @@ class AbsensiController extends Controller
             Excel::download($export, $filename)->getFile()->getPathname()
         );
 
-        return response($response)->header('Content-Type', 'application/octet-stream');
+        return $response;
     }
 }
