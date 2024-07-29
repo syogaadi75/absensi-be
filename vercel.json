@@ -8,12 +8,6 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/public/$1"
-        }
-    ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
