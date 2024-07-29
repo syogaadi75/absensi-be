@@ -4,16 +4,31 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.5.5" }
     },
-    "rewrites": [
-        {
-        "source": "/api/:path*",
-        "destination": "/public/api/:path*"
-        }
-    ],
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }],
+    "builds": [
+    {
+      "src": "api/index.php",
+      "use": "vercel-php@0.5.5"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/public",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
+    }
+  ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
