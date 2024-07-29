@@ -55,6 +55,9 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
 });
 
 // Route untuk tes koneksi database
+$router->group(['middleware' => 'auth'], function () use ($router) {
+    $router->get('/cobainidahbro', 'AbsensiController@index');
+});
 $router->get('/cobaini', 'AbsensiController@index');
 $router->get('/test-db-connection', function () {
     try {
