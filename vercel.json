@@ -4,47 +4,8 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.5.5" }
     },
-    "builds": [
-    {
-      "src": "api/index.php",
-      "use": "vercel-php@0.5.5"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/public",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/public/$1"
-    }
-  ],
-    "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://absensi-be.vercel.app",
-        "APP_NAME": "Absensi",
-        "APP_KEY": "base64:9RTgnpqLToI2qGLtbXq2ld/wkMu8Id5v2RpZMf9fifc=",
-        "APP_TIMEZONE": "UTC",
-        "LOG_SLACK_WEBHOOK_URL": "",
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-
-        "CACHE_DRIVER": "file",
-        "LOG_CHANNEL": "stack"
-    }
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }]
 }
