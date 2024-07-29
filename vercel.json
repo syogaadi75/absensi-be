@@ -8,11 +8,10 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
-    "redirects": [
+    "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/public/$1",
-            "permanent": true
+            "destination": "/public/$1"
         }
     ],
     "env": {
