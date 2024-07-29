@@ -28,11 +28,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
-    $router->post('/users/login', 'UserController@login');
-});
+$router->post('/users/login', 'UserController@login');
 
-$router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($router) {
+$router->group(['middleware' => 'auth'], function () use ($router) {
     $router->get('/users/me', 'UserController@me');
     $router->get('/users/logout', 'UserController@logout');
 
@@ -54,7 +52,7 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
     });
 });
 
-// Route untuk tes koneksi database
+// Route untuk tes koneksi database\
 $router->get('/cobaini', 'AbsensiController@index');
 $router->get('/test-db-connection', function () {
     try {
