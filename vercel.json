@@ -5,8 +5,8 @@
         "api/index.php": { "runtime": "vercel-php@0.5.5" }
     },
     "routes": [{
-        "src": "/(.*)",
-        "dest": "/public/index.php"
+        "src": "/public/(.*)",
+        "dest": "/api/index.php"
     }],
     "env": {
         "APP_ENV": "production",
