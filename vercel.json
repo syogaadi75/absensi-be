@@ -7,5 +7,18 @@
     "routes": [{
         "src": "/(.*)",
         "dest": "/api/index.php"
-    }]
+    }],
+    "redirects": [
+        {
+        "source": "/",
+        "destination": "/public",
+        "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+        "source": "/(.*)",
+        "destination": "/public/$1"
+        }
+    ]
 }
