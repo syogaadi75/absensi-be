@@ -55,6 +55,7 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
 });
 
 // Route untuk tes koneksi database
+$router->get('/cobaini', 'AbsensiController@index');
 $router->get('/test-db-connection', function () {
     try {
         \DB::connection()->getPdo();
