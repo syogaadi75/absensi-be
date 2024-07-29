@@ -11,9 +11,9 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://absensi-be-jsr3.vercel.app",
+        "APP_URL": "https://absensi-be.vercel.app",
         "APP_NAME": "Absensi",
-        "APP_KEY": "",
+        "APP_KEY": "base64:9RTgnpqLToI2qGLtbXq2ld/wkMu8Id5v2RpZMf9fifc=",
         "APP_TIMEZONE": "UTC",
         "LOG_SLACK_WEBHOOK_URL": "",
 
@@ -34,8 +34,7 @@
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
 
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "CACHE_DRIVER": "file",
+        "LOG_CHANNEL": "stack"
     }
 }
